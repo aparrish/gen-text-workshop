@@ -41,4 +41,7 @@ In other languages:
 
 * [Getting Twitter credentials in several languages](https://gist.github.com/moonmilk/035917e668872013c1bd)
 * [Twython](https://github.com/ryanmcgrath/twython)
+* [thricedotted's Twitter bot framework](https://github.com/thricedotted/twitterbot)
+* [Twitter bot framework for Node.js](https://github.com/rfreebern/simple-twitter-bot)
+* [twitter4j](http://twitter4j.org/en/index.html), a Twitter library for Java (works with Processing!)
 
