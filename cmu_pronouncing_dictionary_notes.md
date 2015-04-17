@@ -18,6 +18,18 @@ dictionary](http://www.speech.cs.cmu.edu/cgi-bin/cmudict), or [download the
 dictionary
 itself](http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b).
 
+##Modules and libraries
+
+I've made a Python module for parsing and using the CMU pronouncing dictionary.
+You can download it
+[here](https://github.com/aparrish/rwet-examples/tree/master/pronouncing) (grab
+the `cmudict.py` file and the `cmudict-0.7b` file and put them in the same
+directory as the rest of your Python. I'm making a cleaner library soon,
+promise!)
+
+For the Javascript folks out there, I made this module that you can install
+with `npm` or use in the browser: [pronouncing-js](https://github.com/aparrish/pronouncingjs).
+
 ##File format
 
 The dictionary is a plain-text file. Each line of the file has a word and its
@@ -77,7 +89,8 @@ unstressed.
 
 ##Simple parsing
 
-[Code example](https://github.com/aparrish/rwet-examples/blob/master/pronouncing/words_beginning_with_sss.py) in Python
+* [Code example](https://github.com/aparrish/rwet-examples/blob/master/pronouncing/words_beginning_with_sss.py) in Python
+* [Code example](https://gist.github.com/aparrish/78c23721aeb0e8784615) in Javascript
 
 ##Counting syllables
 
@@ -89,10 +102,18 @@ occur. A simple implementation in Python:
 	def syllable_count(phones):
 		return sum([phones.count(i) for i in '012'])
 
+In Javascript (using underscore):
+
+	function syllableCount(phones) {
+	  return _.reduce(
+	    _.map(phones, function(i) { return (i.match(/[012]/g)||[]).length; }),
+	    function (a, b) { return a+b; })
+	}
+
 ##Rhymes
 
 [Code example](https://github.com/aparrish/rwet-examples/blob/master/pronouncing/cmudict.py) in Python. Note: to use this example code, you'll need to download
-both the Python file and the CMU pronouncing dictionary itself.
+both the Python file and the CMU pronouncing dictionary itself. [Similar code example](https://github.com/aparrish/pronouncingjs/blob/master/pronouncing.js) in Javascript.
 
 Rhyming isn't as simple as it seems! Many people when asked think that 
 two words rhyme if they both have the same final syllable. This isn't true:
