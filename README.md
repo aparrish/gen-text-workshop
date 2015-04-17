@@ -31,6 +31,7 @@ In other languages:
 ##CMU pronouncing dictionary
 
 * [Example code](https://github.com/aparrish/rwet-examples/tree/master/pronouncing) (Python)
+* [pronouncing-js](https://github.com/aparrish/pronouncingjs), a (still very rough!) node-js/browser library I made (Javascript)
 * [Notes](cmu_pronouncing_dictionary_notes.md)
 
 In other languages:
