@@ -21,16 +21,23 @@ itself](http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b).
 ##Modules and libraries
 
 I've made a Python module for parsing and using the CMU pronouncing dictionary.
-You can download it
-[here](https://github.com/aparrish/rwet-examples/tree/master/pronouncing) (grab
-the `cmudict.py` file and the `cmudict-0.7b` file and put them in the same
-directory as the rest of your Python. I'm making a cleaner library soon,
-promise!)
+You can install it like so:
+
+	$ pip install pronouncing
+
+[Full documentation here](https://pronouncing.readthedocs.org/en/latest/tutorial.html).
 
 For the Javascript folks out there, I made this module that you can install
 with `npm` or use in the browser: [pronouncing-js](https://github.com/aparrish/pronouncingjs).
+Create a new project with `npm init` and install like so:
+
+	$ npm install aparrish/pronouncingjs --save
 
 ##File format
+
+But before we start working with libraries, I want to explain a little bit
+about how the dictionary itself is structured, so you can parse it on your
+own if you need to!
 
 The dictionary is a plain-text file. Each line of the file has a word and its
 pronunciation, separated by two spaces. Here's a sample line:
